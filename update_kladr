@@ -2,19 +2,19 @@
 
 set -e
 
-source update_kladr.conf
+source update_kladr.config
 
-#m -rf tmp
-#kdir tmp
+#rm -rf tmp
+#mkdir tmp
 cd tmp
-#url -o base.7z $url
-#7zip -d base.7z
+#curl -o base.7z $url
+#p7zip -d base.7z
 
-#or a in ${tables[@]}
-#o
-  #ython ../dbf2csv.py $a.dbf
-  #conv -f cp866 -t $dest_encoding $a.csv >${a}_utf8.csv
-#one
+#for a in ${tables[@]}
+#do
+  #python ../dbf2csv.py $a.dbf
+  #iconv -f cp866 -t $dest_encoding $a.csv >${a}_utf8.csv
+#done
 
 
 

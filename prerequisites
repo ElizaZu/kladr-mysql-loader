@@ -4,10 +4,3 @@ sudo apt update
 sudo apt install -y mysql-client p7zip python3.6 python-pip
 pip install dbfpy
 
-#mkdir tmp
-#cd tmp
-
-#curl -o dbfpy-2.3.1.tar.gz https://vorboss.dl.sourceforge.net/project/dbfpy/dbfpy/2.3.1/dbfpy-2.3.1.tar.gz
-#tar zxf dbfpy-2.3.1.tar.gz
-#cd dbfpy-2.3.1
-#sudo python setup.py install
