@@ -21,6 +21,14 @@ cd tmp
 for i in ${!tables[@]}
 do
     ta=${tables_aliases[$i]}
+    tsource=${tables[$i]}
+    if [ $ta = "skip" ]
+    then
+        echo "[$tsource]: skipped"
+        continue
+    fi
+    echo "[$tsource]: start update"
     cquery="${create_tables[$i]}"
-    mysql -h $host -u "$user" -p"$password" --database=$database --execute="$cquery; TRUNCATE $ta;"
+    mysql -h $host -u "$user" -p"$password" --database=$database --execute="$cquery; TRUNCATE $ta; LOAD DATA LOCAL INFILE '$PWD/${tsource}_utf8.csv' INTO TABLE $ta FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n' IGNORE 1 LINES;"
+    echo "[$tsource]: finish update"
 done
