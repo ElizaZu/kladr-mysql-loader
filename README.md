@@ -20,7 +20,7 @@ Tested on ubuntu17.4 and Windows 10 (ubuntu for Windows 10)
     password=kladrpassword
     #Database name
     database=kladr
-  </code>
+  </code><br>
 3. Run update_kladr. <b>Attention! When you run the import, the previous data from kladr tables in database will be removed. </b><br>
 
 Code of dbf2csv.py taken from https://gist.github.com/bertspaan/8220892
