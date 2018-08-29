@@ -11,17 +11,16 @@ Tested on ubuntu17.4 and Windows 10 (ubuntu for Windows 10)
 <b>To run: </b><br>
 1. Run the prerequisites file once. Will be installed (if not installed earlier): MySQL client, p7zip, python3.6, python-pip and python library for working with dbf
 2. In the file update_kladr.config configure the connection to the database and, if necessary, tables and columns aliases
-  <code>#Database server
-  host=127.0.0.1
-  
-  #Database user
-  user=kladruser
-  
-  #User's password
-  password=kladrpassword
-  
-  #Database name
-  database=kladr</code>
+  <code>
+    #Database server
+    host=127.0.0.1
+    #Database user
+    user=kladruser
+    #User's password
+    password=kladrpassword
+    #Database name
+    database=kladr
+  </code>
 3. Run update_kladr. <b>Attention! When you run the import, the previous data from kladr tables in database will be removed. </b><br>
 
 Code of dbf2csv.py taken from https://gist.github.com/bertspaan/8220892
