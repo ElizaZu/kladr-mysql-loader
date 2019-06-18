@@ -6,4 +6,3 @@ sudo apt install -y mysql-client p7zip python3.6 python-pip
 
 #instal python pdf library
 pip install dbfpy
-
